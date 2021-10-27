@@ -35,7 +35,7 @@ def next_interval(args):
     return interval
 
 
-def __run(args, retry):
+def _run(args, retry):
     logging.info("run {0}".format(args.cmd))
     process = Popen(args.cmd)
     process.communicate()
@@ -56,7 +56,7 @@ def __run(args, retry):
 def run(args):
     logging.info(args)
     for retry in range(args.retry_count, -1, -1):
-        __run(args, retry)
+        _run(args, retry)
     exit(1)
 
 
