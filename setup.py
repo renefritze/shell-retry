@@ -13,6 +13,7 @@ setup(
     name='shell-retry',
     version='0.0.8',
     packages=['shell_retry'],
+    install_requires=['backoff<2', 'packaging'],
     url='https://github.com/strizhechenko/shell-retry',
     license='MIT',
     author='Oleg Strizhechenko',
